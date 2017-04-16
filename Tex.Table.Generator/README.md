@@ -14,7 +14,7 @@
 ls ~ | python ttg.py --format 3
 ```
 
-## Basic Example
+### Basic Example
 
 *Input*:
 
@@ -37,7 +37,7 @@ ls /bin/z* | python ttg.py --format 5
 
 ![](FIGS/1.png)
 
-## Complete Example
+### Complete Example
 
 *Input*:
 
@@ -53,9 +53,9 @@ ls /bin/z* | python ttg.py --format 5 --title "/bin/z*" --align c --position '!h
 \hline
 \multicolumn{5}{|c|}{/bin/z*} \\
 \hline
-/bin/zcat  &  /bin/zcmp  &  /bin/zdiff  &  /bin/zegrep  &  /bin/zfgrep \\
+/bin/zcat  	&  /bin/zcmp  	&  /bin/zdiff  &  /bin/zegrep  	&  /bin/zfgrep \\
 \hline
-/bin/zforce  &  /bin/zgrep  &  /bin/zless  &  /bin/zmore  &  /bin/znew 
+/bin/zforce  	&  /bin/zgrep  	&  /bin/zless  &  /bin/zmore  	&  /bin/znew 
 \\ \hline
 \end{tabular}
 \end{table}
@@ -64,3 +64,46 @@ ls /bin/z* | python ttg.py --format 5 --title "/bin/z*" --align c --position '!h
 *Generated PDF*:
 
 ![](FIGS/2.png)
+
+## Reading From File
+
+*Command*:
+
+```
+python ttg.py -input data.dat --format 3 --delimiter '\t' --borders --title "Generic Table"
+```
+
+### Example
+
+*Input*:
+
+```
+ID	Names	Value
+1	Blah	deadbeef
+2	Yeah	c0fee
+3	Nope	133t
+```
+
+*Output*:
+
+```
+\begin{table}[H]
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{3}{|c|}{Generic Table} \\
+\hline
+ID  &  Names  &  Value \\
+\hline
+1  &  Blah  &  deadbeef \\
+\hline
+2  &  Yeah  &  c0fee \\
+\hline
+3  &  Nope  &  133t 
+\\ \hline
+\end{tabular}
+\end{table}
+```
+
+*Generated PDF*:
+
+![](FIGS/3.png)
