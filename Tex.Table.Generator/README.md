@@ -4,7 +4,7 @@
 
 ```
 [TTG] python ttg.py -input <file> (default: stdin) --tex-options
-[TTG] Tex Options: --title <title> (default: empty) --format <columns> (required) --position <position> (default: H) --align <alignment> (default: l) --title <title> (default:None) --borders (default:No) 
+[TTG] Tex Options: --title <title> (default: empty) --format <columns> (required) --position <position> (default: H) --align <alignment> (default: l) --title <title> (default:None) --borders (default:No) --delimiter <character> (default: None)
 [TTG] Type -h for help
 ```
 
